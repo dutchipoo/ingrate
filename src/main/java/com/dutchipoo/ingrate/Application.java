@@ -12,7 +12,8 @@ public class Application {
 				.readEnvironment()
 				.findGitDir()
 				.build();
-			System.out.println(repo.getBranch());
+			DataDirectory dd = DataDirectoryFactory.getDataDirectory();
+			System.out.println(dd.getPath());
 		} catch (Exception e) {
 			e.printStackTrace(System.err);
 		}
